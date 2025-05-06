@@ -51,9 +51,9 @@ func main() {
 	routes.SetupRoutes(app)
 
 	// serve static files
-	app.Static("/", "./client")
+	app.Static("/", "./client/dist")
 	app.Get("*", func (c *fiber.Ctx) error {
-		return c.SendFile("./client/index.html")
+		return c.SendFile("./client/dist/index.html")
 	})
 
 
