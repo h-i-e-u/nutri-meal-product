@@ -47,6 +47,8 @@ func main() {
 		}))
 	}
 
+	// setup routes
+	routes.SetupRoutes(app)
 
 	// serve static files
 	app.Static("/", "./client")
@@ -54,9 +56,6 @@ func main() {
 		return c.SendFile("./client/index.html")
 	})
 
-
-	// setup routes
-	routes.SetupRoutes(app)
 
 	port := os.Getenv("PORT")
 	if port == "" {
