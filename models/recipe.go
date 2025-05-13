@@ -26,4 +26,6 @@ type Recipe struct {
     PreparationTime string            `json:"preparationTime" bson:"preparation_time"`
     Difficulty      string            `json:"difficulty" bson:"difficulty"`
     Allergens       []string          `json:"allergens" bson:"allergens"`
+    Image           string            `json:"image" bson:"image"`
+
 }
